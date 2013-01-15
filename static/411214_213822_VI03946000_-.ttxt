@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- GPAC 3GPP Text Stream -->
+<TextStream version="1.1">
+<TextStreamHeader width="400" height="60" layer="0" translation_x="0" translation_y="0">
+<TextSampleDescription horizontalJustification="center" verticalJustification="bottom" backColor="0 0 0 0" verticalText="no" fillTextRegion="no" continuousKaraoke="no" scroll="None">
+<FontTable>
+<FontTableEntry fontName="Serif" fontID="1"/>
+</FontTable>
+<TextBox top="0" left="0" bottom="60" right="400"/>
+<Style styles="Normal" fontID="1" fontSize="18" color="ff ff ff ff"/>
+</TextSampleDescription>
+</TextStreamHeader>
+<TextSample sampleTime="00:00:01.668" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:03.370" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:07.140" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:08.842" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:10.444" xml:space="preserve">[ALARM CLOCK]</TextSample>
+<TextSample sampleTime="00:00:12.880" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:33.967" xml:space="preserve">[KNOCKING]</TextSample>
+<TextSample sampleTime="00:00:36.336" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:37.971" xml:space="preserve">[KNOCKING]</TextSample>
+<TextSample sampleTime="00:00:40.340" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:41.975" xml:space="preserve">[KNOCKING]</TextSample>
+<TextSample sampleTime="00:00:44.344" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:48.448" xml:space="preserve">-WHAT?!</TextSample>
+<TextSample sampleTime="00:00:50.817" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:53.020" xml:space="preserve">-MEOW!</TextSample>
+<TextSample sampleTime="00:00:55.489" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:00:57.958" xml:space="preserve">-HOO! C'MERE, C'MERE. KITTY! KITTY!</TextSample>
+<TextSample sampleTime="00:01:01.495" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:01:05.866" xml:space="preserve">-MEOW!</TextSample>
+<TextSample sampleTime="00:01:08.835" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:01:20.981" xml:space="preserve">-YOO-HOO!</TextSample>
+<TextSample sampleTime="00:01:23.383" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:01:40.100" xml:space="preserve">♪ NOW OLE Mr. JOHNSON HAD TROUBLES OF HIS OWN ♪</TextSample>
+<TextSample sampleTime="00:01:43.937" xml:space="preserve">♪ HE HAD A YELLOW CAT THAT WOULDN'T LEAVE HIS HOME ♪</TextSample>
+<TextSample sampleTime="00:01:47.774" xml:space="preserve">♪ A SPECIAL PLAN WITH DECEPTION AS THE KEY ♪</TextSample>
+<TextSample sampleTime="00:01:51.345" xml:space="preserve">♪ ONE LITTLE CAT HOW HARD COULD IT BE ♪</TextSample>
+<TextSample sampleTime="00:01:56.183" xml:space="preserve">♪ HOW HARD COULD IT BE ♪</TextSample>
+<TextSample sampleTime="00:01:58.885" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:02:38.759" xml:space="preserve">♪ BUT THE CAT CAME BACK THE VERY NEXT DAY ♪</TextSample>
+<TextSample sampleTime="00:02:42.496" xml:space="preserve">♪ THE CAT CAME BACK THEY THOUGHT HE WAS A GONER ♪</TextSample>
+<TextSample sampleTime="00:02:45.666" xml:space="preserve">♪ BUT THE CAT CAME BACK HE JUST WOULDN'T STAY AWAY ♪</TextSample>
+<TextSample sampleTime="00:02:51.405" xml:space="preserve">-WELL! HA! HA! HA!</TextSample>
+<TextSample sampleTime="00:02:53.907" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:03:33.246" xml:space="preserve">♪ BUT THE CAT CAME BACK THE VERY NEXT DAY ♪</TextSample>
+<TextSample sampleTime="00:03:36.149" xml:space="preserve">♪ THE CAT CAME BACK THEY THOUGHT HE WAS A GONER ♪</TextSample>
+<TextSample sampleTime="00:03:39.619" xml:space="preserve">♪ BUT THE CAT CAME BACK HE JUST WOULDN'T STAY AWAY ♪</TextSample>
+<TextSample sampleTime="00:03:45.325" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:04:27.901" xml:space="preserve">♪ BUT THE CAT CAME BACK THE VERY NEXT DAY ♪</TextSample>
+<TextSample sampleTime="00:04:31.638" xml:space="preserve">♪ THE CAT CAME BACK THEY THOUGHT HE WAS A GONER ♪</TextSample>
+<TextSample sampleTime="00:04:34.608" xml:space="preserve">♪ BUT THE CAT CAME BACK ♪</TextSample>
+<TextSample sampleTime="00:04:36.576" xml:space="preserve">♪ HE JUST WOULDN'T STAY AWAY ♪</TextSample>
+<TextSample sampleTime="00:04:40.380" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:04:52.826" xml:space="preserve">-WHAT THE...?!</TextSample>
+<TextSample sampleTime="00:04:55.028" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:05:22.322" xml:space="preserve">CAT!</TextSample>
+<TextSample sampleTime="00:05:24.591" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:05:42.542" xml:space="preserve">♪ WELL OLE Mr. JOHNSON HAD TROUBLES OF HIS OWN ♪</TextSample>
+<TextSample sampleTime="00:05:46.446" xml:space="preserve">♪ STILL THE YELLOW CAT WOULDN'T LEAVE HIS HOME ♪</TextSample>
+<TextSample sampleTime="00:05:49.683" xml:space="preserve">♪ STEPS WERE NEEDED TO REMOVE THE LITTLE CURSE ♪</TextSample>
+<TextSample sampleTime="00:05:53.220" xml:space="preserve">♪ THE OLE MAN KNEW IT COULDN'T GET ANY WORSE ♪</TextSample>
+<TextSample sampleTime="00:05:59.559" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:06:21.815" xml:space="preserve">-HA! HA! HA! HELLO PUDDY CAT!</TextSample>
+<TextSample sampleTime="00:06:25.986" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:06:38.565" xml:space="preserve">♪ BUT THE CAT CAME BACK THE VERY NEXT DAY ♪</TextSample>
+<TextSample sampleTime="00:06:42.135" xml:space="preserve">♪ THE CAT CAME BACK THEY THOUGHT HE WAS A GONER ♪</TextSample>
+<TextSample sampleTime="00:06:45.772" xml:space="preserve">♪ BUT THE CAT CAME BACK ♪</TextSample>
+<TextSample sampleTime="00:06:47.841" xml:space="preserve">♪ HE JUST WOULDN'T STAY AWAY ♪</TextSample>
+<TextSample sampleTime="00:06:52.245" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:06:53.613" xml:space="preserve">♪ STAY AWAY ♪</TextSample>
+<TextSample sampleTime="00:06:57.083" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:07:03.790" xml:space="preserve">CAPTIONS PERFORMED BY</TextSample>
+<TextSample sampleTime="00:07:05.425" xml:space="preserve">CENTRE NATIONAL DU SOUS-TITRAGE PST INC.</TextSample>
+<TextSample sampleTime="00:07:11.364" xml:space="preserve"></TextSample>
+<TextSample sampleTime="00:07:14.367" xml:space="preserve"></TextSample>
+</TextStream>

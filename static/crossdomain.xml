@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+        <cross-domain-policy>
+            <allow-access-from domain="*" />
+            <param name="allowNetworking" value="all" />
+            <site-control permitted-cross-domain-policies="master-only"/>
+            <allow-http-request-headers-from domain="*.onf.ca" headers="X-NFB*"/> 
+            <allow-http-request-headers-from domain="*.nfb.ca" headers="X-NFB*"/>
+            <allow-http-request-headers-from domain="localhost" headers="X-NFB*"/>
+            <allow-http-request-headers-from domain="*.facebook.com" headers="X-NFB*"/>
+        </cross-domain-policy>
+        

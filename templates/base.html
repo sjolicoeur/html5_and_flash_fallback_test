@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <title>Welcome to Shakes{% block head_title %} - Home{% endblock %}</title>
+
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  
+<!-- link rel=stylesheet type=text/css href="{{ url_for('static', filename='foundation/stylesheets/foundation.css') }}">
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='presentation.css') }}">
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='foundation.top-bar.css') }}">
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='zurb.mega-drop.css') }}">
+
+
+
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}" -->
+
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Wendy+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Elsie' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bigelow+Rules' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Seaweed+Script|Meddon|Pacifico|Damion|Sancreek&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Michroma|Give+You+Glory|Londrina+Sketch|Londrina+Outline|Great+Vibes|Seaweed+Script|Cinzel+Decorative:400,700,900|Qwigley|Playball|Press+Start+2P|Ruthie&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- // -->
+
+
+{% block js_imports %}
+<!-- script type="text/javascript" src="{{ url_for('static', filename='jquery-ui-1.8.18.custom/js/jquery-1.7.1.min.js') }}"></script -->
+
+    <script type="text/javascript" src="{{ url_for('static', filename='projekktor/projekktor.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='projekktor/theme/style.css') }}" type="text/css" media="screen" />
+
+<!-- // -->
+<script type="text/javascript" src="/static/js/sijax/sijax.js"></script>
+<script type="text/javascript" src="/static/js/sijax/json2.js"></script>
+<script type="text/javascript">
+    {{ g.sijax.get_js()|safe }}
+</script>
+
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-877387-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style>
+body{
+  //min-width :960px;
+  //background-image: url(http://image.wallpaperbase.info/17700468/Holiday/Christmas/Christmas-533%20.jpg);//url('{{ url_for('static', filename='bg_book.jpg') }}');
+  background-repeat:no-repeat;
+  background-size: 100% auto;
+  //background-size: 100%;
+  background-position:center; 
+  //height : 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%; 
+    background-size: 100% 100%;
+    //padding: 180px;
+}
+/* https://kuler.adobe.com/#themeID/181830 */
+html,body, h1, h2, h3, h4, h5  {
+//font-size :18em;
+  font-family: 'Wendy One', sans-serif;
+font-family: 'Elsie', cursive;
+font-family: 'Rye', cursive;
+///font-family: 'Sacramento', cursive;
+///font-family: 'Bigelow Rules', cursive;
+//font-family: 'MedievalSharp', cursive;
+///font-family: 'Seaweed Script', cursive;
+////font-family: 'Meddon', cursive;
+//font-family: 'Pacifico', cursive;
+///font-family: 'Damion', cursive;
+//font-family: 'Sancreek', cursive;
+///font-family: 'Michroma', sans-serif;
+//font-family: 'Give You Glory', cursive;
+////font-family: 'Londrina Sketch', cursive;
+///font-family: 'Londrina Outline', cursive;
+//font-family: 'Great Vibes', cursive;
+//font-family: 'Seaweed Script', cursive;
+///font-family: 'Cinzel Decorative', cursive;
+//font-family: 'Qwigley', cursive;
+////font-family: 'Playball', cursive;
+font-family: 'Press Start 2P', cursive;
+//font-family: 'Ruthie', cursive;
+text-shadow: 1px 1px 1px #000, 3px 3px 5px black;
+text-shadow: 0px 2px 2px rgba(33, 33, 33, 0.4);
+}
+
+
+</style>
+
+</head>
+<body>
+  <!-- ZURBar -->
+ 
+
+
+<h1>An HTML5 Player.</h1>
+{% block body %}
+
+Hello 
+
+{% endblock %}
+
+           
+
+
+<script type="text/javascript" >
+  $(document).ready(function() {
+     //   $( "#draggable" ).draggable();
+    });
+</script>
+
+
+
+  <!-- div id="copyright">
+    <div class="row">
+      <div class="seven columns offset-by-three">
+        <p>Site content &copy; 2012 and Made by Stephane Jolicoeur-Fidelia</p>
+      </div>
+
+    </div>
+  </div -->
+
+
+</body>
+</html>
+

@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block body %}
+ 
+<ul>
+	<li>I want to choose my stream speed</li>
+	<li>I want to have subtitles</li>
+	<li>I want a poster image | X </li>
+	<li>I want stats at start, 1%, 25%</li>
+	<li>I want to have a pre-roll</li>
+	<li>I want to read ttxt</li>
+	<li>I want a custom UI</li>
+	<li>I want the flash to work with RTMP</li>
+	<li>I want to switch from flash to html5</li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li>idea : two players one for pre-roll one for actual film </li>
+</ul>
+<video poster="http://www.nfb.ca/medias/nfb_tube/thumbs_large/2012/The-Cat-Came-Back_LG.jpg" id="video-canvas-fancy" controls preload="auto">
+    <!-- source src="http://localhost:9002/cat.mp4" type='video/mp4' / -->
+    <source src="http://stream.nfb.ca/FLASH/flash4/collection4/streams/M320K/films/320_VI50665000.mp4" type='video/mp4' />
+    <source src="http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M415K/films/300_VI03946000_sen.mp4" type='video/mp4' />
+    <source src="http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M3M/films/3000_VI03946000_sen.mp4" type='video/mp4' /><!-- 720p -->
+    <source src="http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M5M/films/5000_VI03946000_sen.mp4" type='video/mp4' /><!-- 1080p -->
+    <text category="SUB" lang="en" type="application/ttaf+xml" src="{{ url_for('static', filename="411214_213822_VI03946000_-.ttxt") }}"></text>
+    <!-- track kind=subtitles src="{{ url_for('static', filename="411214_213822_VI03946000_-.ttxt") }}" srclang="en" label="English" / -->
+</video>
+
+<video id="my_video_1" class="video-js vjs-default-skin" controls
+  preload="none" width="640" height="264" poster="http://www.nfb.ca/medias/nfb_tube/thumbs_large/2012/The-Cat-Came-Back_LG.jpg" data-setup='{"techOrder": ["flash", "html5"]}'>
+  <!-- source src="http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M320K/films/320_VI50665000.mp4" type='video/mp4'>
+  <source src="my_video.webm" type='video/webm' -->
+</video>
+
+<script>
+
+
+//var myPlayer = _V_("my_video_1", {"techOrder": ["flash", "html5"], "preload": "auto", 'RTMPConnection': 'rtmp://rtmp01.hddn.com/play' , 'RTMPStream' : 'mp4:vod/demo.flowplayervod/buffalo_soldiers.mp4' });
+_V_.options.flash.swf = "http://127.0.0.1:8989{{ url_for('static', filename='video-js.swf') }}";
+var myPlayer = _V_("my_video_1", {"techOrder": ["flash", "html5"], "preload": "auto", 'RTMPConnection': 'rtmp://pstream.nfb.ca' , 'RTMPStream' : 'mp4:FLASH/flash4/collection4/streams/M320K/films/320_VI50665000.mp4' });
+// -- [17:41:10.483] mediaChanged 
+////////////////
+var currentTime = 0; 
+function afterPlaySeek() {
+    /*setTimeout( function() {
+        myPlayer.currentTime(currentTime);
+        console.log("--> seeked to time : " + currentTime)
+    }, 3);*/
+    myPlayer.currentTime(currentTime);
+    //myPlayer.pause();
+    myPlayer.removeEvent("loadeddata", afterPlaySeek );
+    console.log("sent seek to time : " + currentTime);
+    jQuery(".vjs-loading-spinner").css("display", "none"); // spinner still appears
+}
+
+function changeStream(url, urlType) {
+    // get current time 
+    currentTime = myPlayer.currentTime();
+    console.log("current time is : " + currentTime);
+    myPlayer.src({ type: urlType, src: url });
+    // seek to current time
+    //myPlayer.ready(function(){
+
+    //}
+    console.log("going to play");
+    myPlayer.addEvent("loadeddata", afterPlaySeek );
+    myPlayer.play();
+    
+    console.log("changed src now seeking to current time");
+     
+    
+}
+
+function playLow() {
+    var src = "http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M320K/films/320_VI50665000.mp4" ;
+    changeStream(src, "video/mp4");
+}
+function play720() {
+    var src = "http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M3M/films/3000_VI50684000.mp4"  ;
+    changeStream(src, "video/mp4");
+}
+function play1080() {
+    var src = "http://localhost:9002/cat.mp4" ;
+    //"http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M5M/films/5000_VI03946000_sen.mp4";
+    //'rtmp://rtmp01.hddn.com/play/mp4:vod/demo.flowplayervod/buffalo_soldiers.mp4'; 
+    //'rtmp://rtmp01.hddn.com/play/vod/demo.flowplayervod/buffalo_soldiers.mp4'; 
+    //"http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M5M/films/5000_VI03946000_sen.mp4";
+    changeStream(src, "video/mp4");
+}
+function play320() {
+    var src = "http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M415K/films/300_VI03946000_sen.mp4";
+    changeStream(src, "video/mp4");
+}
+function playHLS() {
+    console.log("gonna play hls");
+    var src = 'https://devimages.apple.com.edgekey.net/resources/http-streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8';
+    //' 'http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8';
+    changeStream(src, "application/vnd.apple.mpegurl");
+    console.log(" play hls");
+}
+</script>
+<ul>
+    
+    <li><a onclick="playLow();return false;">415k</a></li>
+    <li><a onclick="playLow();return false;">320k</a></li>
+    <li><a onclick="play720();return false;">720p</a></li>
+    <li><a onclick="play1080();return false;">1080p</a></li>
+    <li><a onclick="playHLS();return false;">HLS</a></li>
+</ul>
+
+rtmp://rtmp01.hddn.com/play/mp4:vod/demo.flowplayervod/buffalo_soldiers.mp4
+<br>
+rtmp://rtmp01.hddn.com/play/vod/demo.flowplayervod/buffalo_soldiers.mp4
+<br>
+<br>
+
+
+<div id="projekktored" poster="http://www.nfb.ca/medias/nfb_tube/thumbs_large/2012/The-Cat-Came-Back_LG.jpg" controls preload="auto"  width="800" height="450">
+
+
+</div>
+
+
+<script type="text/javascript">
+var proPlayer;
+$(document).ready(function() {
+proPlayer = projekktor('#projekktored', {
+    volume: 0.5,
+    controls : true,
+    title : 'Madame Tutli-Putli',
+    playerFlashMP4: 'http://172.16.158.73:8989{{ url_for('static', filename='projekktor/jarisplayer.swf') }}',
+    playerFlashMP3: '{{ url_for('static', filename='projekktor/jarisplayer.swf') }}',
+    plugin_display: {
+     logoImage:"yourlogo.png",
+     logoURL:"http://www.nfb.ca/",
+     target:"_blank"
+    },
+    platforms : ['browser', 'ios', 'native', 'flash'],
+    streamType: 'http',
+    playlist:   [{
+        0: {src:"http://stream.nfb.ca/FLASH/flash4/collection4/streams/M320K/films/320_VI50665000.mp4", type:"video/mp4"},
+        1: {src:"http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M3M/films/3000_VI03946000_sen.mp4", type:"video/mp4"},
+        2: {src:"https://devimages.apple.com.edgekey.net/resources/http-streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8", type:"application/vnd.apple.mpegurl"},
+        config: {
+            poster: "http://www.nfb.ca/medias/nfb_tube/thumbs_large/2012/The-Cat-Came-Back_LG.jpg",
+            plugin_display: {
+            logoImage: 'yourlogo.png',
+            logoDelay: 1
+            }
+        }
+        }]
+});
+});
+</script> 
+{% endblock %}
