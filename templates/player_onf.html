@@ -77,6 +77,8 @@ var myPlayer = _V_("my_video_1", {"techOrder": ["flash", "html5"], "preload": "a
 
 ////////////////
 var currentTime = 0; 
+var sentStart = false;
+var lastTime ;
 function afterPlaySeek() {
     /*setTimeout( function() {
         myPlayer.currentTime(currentTime);
@@ -106,6 +108,25 @@ function changeStream(url, urlType) {
      
     
 }
+function sendStart() {
+    if (!sentStart ) {
+        console.log("started to play film");
+        sentStart = true;
+        lastTime = myPlayer.currentTime();
+    }
+
+}
+function fireEvery5seconds() {
+    var delta =  myPlayer.currentTime() - lastTime ;
+    if ( parseInt(delta) > 5) {
+        console.log("it's been 5 seconds or so");
+        lastTime = myPlayer.currentTime();
+
+    }
+}
+myPlayer.addEvent("play", sendStart);
+myPlayer.addEvent("timeupdate", fireEvery5seconds);
+// timeupdate
 
 function playLow() {
     var src = "http://pstream.nfb.ca/FLASH/flash4/collection4/streams/M320K/films/320_VI50665000.mp4" ;
