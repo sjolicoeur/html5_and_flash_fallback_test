@@ -51,9 +51,14 @@ def index():
     return render_template("player.html")
 
 @app.route('/nfb', methods=['GET'])
-def index():
+def index_nfb():
     #return "te"
     return render_template("player_onf.html")
+
+@app.route('/van', methods=['GET'])
+def index_van():
+    #return "te"
+    return render_template("player_vanilla.html")
  
 @app.route('/crossdomain.xml', methods=['GET'])
 def crossdomain():

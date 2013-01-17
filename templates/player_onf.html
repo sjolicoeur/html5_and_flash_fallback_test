@@ -3,22 +3,44 @@
 {% block body %}
  
 <ul>
-	<li>I want to choose my stream speed</li>
-	<li>I want to have subtitles</li>
-	<li>I want a poster image | X </li>
-	<li>I want stats at start, 1%, 25%</li>
-	<li>I want to have a pre-roll</li>
-	<li>I want to read ttxt</li>
-	<li>I want a custom UI</li>
-	<li>I want the flash to work with RTMP</li>
-	<li>I want to switch from flash to html5</li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li>idea : two players one for pre-roll one for actual film </li>
+Valider qu'un player HTML5 peut :
+- 
+- pouvoir avoir des pre-rolls, post-roll
+- support de poster images
+- support de changement de vitesses
+
+- error catching and logging ( connection errors, stream not found )
+
+
+- replay
+
+
+    <li>I want to choose my stream speed - DONE</li>
+    <li>I want to have subtitles - NEEDS webvtt or srt </li>
+    <li>I want a poster image | X </li>
+    <li>I want stats at start, 1%, 25%</li>
+    <li>I want to have a pre-roll</li>
+    <li>I want to read ttxt</li>
+    <li>I want a custom UI</li>
+    <li>I want the flash to work with RTMP</li>
+    <li>I want to switch from flash to html5</li>
+    <li>avoir un fallback flash</li>
+    <li>volume / mute</li>
+    <li>progress bar</li>
+    <li>share window, warnings, title</li>
+    <li></li>
+    <li>support du player_config ( xml / json )</li>
+    <li>fullscreen</li>
+    <li>support des stats ( start, %, connection problems )</li>
+    <li>related at the end - events are there ( to be coded ) </li>
+    <li>error panels ( connection ) - tio be coded</li>
+    <li>cue points -  to be coded</li>
+    <li>seeking - DONE rtmp and http</li>
+    <li>skinning</li>
+    <li>add elements to the toolbar - can be done </li>
+    <li>add nfb logo - can be done in html</li>
+    <li>rtmp support in the flash - Works with our old player needs a few tweeks with the videojs one </li>
+    <li>idea : two players one for pre-roll one for actual film </li>
 </ul>
 <video poster="http://www.nfb.ca/medias/nfb_tube/thumbs_large/2012/The-Cat-Came-Back_LG.jpg" id="video-canvas-fancy" controls preload="auto">
     <!-- source src="http://localhost:9002/cat.mp4" type='video/mp4' / -->
